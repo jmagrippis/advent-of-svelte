@@ -1,0 +1,8 @@
+{
+	"name": "@repo/css",
+	"version": "0.0.1",
+	"private": true,
+	"files": [
+		"globals.css"
+	]
+}
