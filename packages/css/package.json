@@ -1,8 +1,17 @@
 {
 	"name": "@repo/css",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"private": true,
 	"files": [
-		"globals.css"
-	]
+		"root.css",
+		"tailwind.config.js"
+	],
+	"devDependencies": {
+		"@tailwindcss/forms": "^0.5.7",
+		"tailwindcss": "^3.3.6"
+	},
+	"peerDependencies": {
+		"@tailwindcss/forms": "^0.5.7",
+		"tailwindcss": "^3.3.6"
+	}
 }

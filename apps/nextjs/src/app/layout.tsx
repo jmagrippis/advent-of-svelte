@@ -1,14 +1,14 @@
-import '@repo/css/globals.css'
+import './globals.css'
 import type {Metadata} from 'next'
-import {Trispace} from 'next/font/google'
+import {Raleway} from 'next/font/google'
 
-const sansFont = Trispace({
+const sansFont = Raleway({
 	subsets: ['latin'],
 	variable: '--font-sans',
 })
 
 export const metadata: Metadata = {
-	title: 'Advent of Svelte... in NextJS',
+	title: 'Advent of Svelte... with NextJS!',
 	description:
 		'Next.js implementations of the Advent of Svelte challenges for 2023!',
 }
@@ -29,7 +29,7 @@ export default function RootLayout({
 				{/* eslint-disable @next/next/no-sync-scripts */}
 				<script src="/theme-toggle.js" />
 			</head>
-			<body className="bg-red-200">{children}</body>
+			<body>{children}</body>
 		</html>
 	)
 }
