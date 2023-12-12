@@ -1,6 +1,0 @@
-{
-	"/": [],
-	"/about": [
-		"src/routes/about/+page.server.ts"
-	]
-}
