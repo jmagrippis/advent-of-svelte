@@ -2,6 +2,12 @@
 
 Solutions to the [Advent of Svelte 2023 daily challenges](https://advent.sveltesociety.dev/)!
 
+## Livestreams
+
+Johnny livestreams [the development of this project](https://www.youtube.com/@johnnifytech)!
+
+- [Days 1 & 2](https://www.youtube.com/watch?v=Wif6KWpFFM8)
+
 ## What's inside?
 
 This Turborepo includes the following packages/apps:
@@ -11,10 +17,9 @@ This Turborepo includes the following packages/apps:
 - `sveltekit`: [SvelteKit](https://kit.svelte.dev/) implementations [Next.js](https://nextjs.org/) app
 - `nextjs`: [Next.js](https://nextjs.org/) implementations
 - `@repo/css`: A CSS file + [Tailwind](https://tailwindcss.com/) config shared by both `sveltekit` and `nextjs` implementations
+- `@repo/advent-api`: Helper methods interfacing with the third-party APIs occasionally provided by the challenges
 
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
+## Notable tech
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
