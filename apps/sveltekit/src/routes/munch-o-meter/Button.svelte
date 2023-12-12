@@ -11,6 +11,6 @@
 	{disabled}
 	class={`${className} ${
 		disabled ? 'pointer-events-none' : ''
-	} bg-surface-brand-2 relative rounded-lg p-2 shadow transition duration-300 hover:brightness-125 active:-translate-y-1 disabled:opacity-50`}
+	} bg-surface-brand-2 active:duration-50 relative rounded-lg p-2 text-2xl shadow transition duration-300 hover:brightness-125 active:-translate-y-1 disabled:opacity-50`}
 	{value}><slot /></button
 >

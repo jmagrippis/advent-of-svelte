@@ -33,14 +33,14 @@
 
 <div class="grid grid-cols-2 place-items-center justify-center text-9xl">
 	<Cookie class="w-32" />
-	<div class="grid h-full w-full items-center justify-center">
+	<div class="count">
 		{#key count}
 			<span
-				class="count"
+				class="pb-2"
 				transition:fly={{
 					delay: 250,
 					duration: 300,
-					y: 100,
+					y: 120,
 					easing: quintOut,
 				}}
 			>
@@ -58,7 +58,7 @@
 	{/each}
 </form>
 
-<section class="flex gap-4 text-xl">
+<section class="flex items-center justify-center gap-4 text-2xl">
 	<div>Mood 🎅:</div>
 	<div>
 		{#if count === 0}
@@ -71,8 +71,14 @@
 	</div>
 </section>
 
-<style>
+<style lang="postcss">
 	.count {
-		grid-area: 1/1;
+		display: grid;
+		grid-template-areas: 'stack';
+
+		& > * {
+			grid-area: stack;
+			place-self: center;
+		}
 	}
 </style>
