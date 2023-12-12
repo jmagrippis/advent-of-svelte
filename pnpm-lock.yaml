@@ -32,6 +32,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.43)(react@18.2.0)
+      '@repo/advent-api':
+        specifier: workspace:*
+        version: link:../../packages/advent-api
       '@repo/css':
         specifier: workspace:*
         version: link:../../packages/css
@@ -99,12 +102,12 @@ importers:
 
   apps/sveltekit:
     devDependencies:
-      '@fontsource-variable/inconsolata':
-        specifier: ^5.0.16
-        version: 5.0.16
       '@fontsource-variable/raleway':
         specifier: ^5.0.17
         version: 5.0.17
+      '@repo/advent-api':
+        specifier: workspace:*
+        version: link:../../packages/advent-api
       '@repo/css':
         specifier: workspace:^
         version: link:../../packages/css
@@ -165,6 +168,8 @@ importers:
       vite:
         specifier: ^5.0.7
         version: 5.0.7
+
+  packages/advent-api: {}
 
   packages/css:
     devDependencies:
@@ -652,10 +657,6 @@ packages:
   /@fastify/busboy@2.1.0:
     resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
     engines: {node: '>=14'}
-    dev: true
-
-  /@fontsource-variable/inconsolata@5.0.16:
-    resolution: {integrity: sha512-cBORoFvgCEoWB8i65+AFScraU1Tygus5fAXiAtCqNhhbQwII9zUTnL6kyju3MhQzeDyn9mGIbU6UOODL3S64mw==}
     dev: true
 
   /@fontsource-variable/raleway@5.0.17:
