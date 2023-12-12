@@ -2,6 +2,7 @@ import './globals.css'
 import type {Metadata} from 'next'
 import {Raleway} from 'next/font/google'
 import {Header} from './Header'
+import {Footer} from './Footer'
 
 const sansFont = Raleway({
 	subsets: ['latin'],
@@ -48,7 +49,7 @@ export default function RootLayout({
 			<body className={sansFont.variable}>
 				<Header />
 				{children}
-				<footer>have fun</footer>
+				<Footer />
 			</body>
 		</html>
 	)
