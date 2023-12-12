@@ -11,7 +11,7 @@ const TheList = ({searchParams}: Props) => {
 	const status = searchParams?.status
 
 	return (
-		<main className="content-grid gap-y-4 lg:gap-y-8">
+		<main className="content-grid grow gap-y-4 lg:gap-y-8">
 			<h1 className="text-4xl font-bold lg:text-6xl">
 				Naughty or Nice Tracker
 			</h1>
