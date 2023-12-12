@@ -10,6 +10,12 @@ export default function Page(): React.ReactNode {
 			>
 				Naughty or Nice Tracker
 			</Link>
+			<Link
+				className="decoration-foreground-accent underline transition duration-300 hover:brightness-125"
+				href="/munch-o-meter"
+			>
+				Merry Munch-o-Meter
+			</Link>
 		</main>
 	)
 }

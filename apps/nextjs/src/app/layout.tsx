@@ -10,6 +10,7 @@ const sansFont = Raleway({
 
 const metaDescription =
 	'Next.js implementations of the Advent of Svelte challenges for 2023!'
+
 export const metadata: Metadata = {
 	metadataBase: new URL(
 		process.env.NEXT_PUBLIC_ROOT_URL || process.env.VERCEL_URL

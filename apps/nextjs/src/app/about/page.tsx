@@ -1,3 +1,18 @@
+import type {Metadata} from 'next'
+
+const title = 'About'
+const description =
+	'Learn more about SvelteKritic, SvelteKit, and the related YouTube videos by Johnny!'
+
+export const metadata: Metadata = {
+	title,
+	description,
+	openGraph: {
+		title,
+		description,
+	},
+}
+
 const About = () => (
 	<main className="content-grid gap-y-4 text-xl lg:gap-y-8 lg:text-2xl">
 		<h1 className="text-4xl font-bold lg:text-6xl">About</h1>
