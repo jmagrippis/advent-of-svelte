@@ -2,6 +2,7 @@
 	import YouTubeIcon from '$lib/icons/YouTube.svelte'
 	import GitHubIcon from '$lib/icons/GitHub.svelte'
 	import DiscordIcon from '$lib/icons/Discord.svelte'
+	import SvelteIcon from '$lib/icons/Svelte.svelte'
 	import PulsingHeart from './PulsingHeart.svelte'
 </script>
 
@@ -19,16 +20,16 @@
 		target="_blank"
 		rel="noopener noreferrer"
 		aria-label="Johnny’s YouTube channel"
-		class="hover:text-emphasis-hover"
+		class="hover:text-foreground-accent transition-colors duration-300"
 	>
 		<YouTubeIcon class="w-5" />
 	</a>
 	<a
-		href="https://github.com/jmagrippis/svelte-kritic"
+		href="https://github.com/jmagrippis/advent-of-svelte"
 		target="_blank"
 		rel="noopener noreferrer"
 		aria-label="checkout the source code at the github repo"
-		class="hover:text-emphasis-hover"
+		class="hover:text-foreground-accent transition-colors duration-300"
 	>
 		<GitHubIcon class="w-5" />
 	</a>
@@ -37,9 +38,18 @@
 		target="_blank"
 		rel="noopener noreferrer"
 		aria-label="Join Johnny's Discord community!"
-		class="hover:text-emphasis-hover"
+		class="hover:text-foreground-accent transition-colors duration-300"
 	>
 		<DiscordIcon class="w-5" />
+	</a>
+	<a
+		href="https://kit.svelte.dev/"
+		target="_blank"
+		rel="noopener noreferrer"
+		aria-label="Check out the SvelteKit project!"
+		class="hover:text-foreground-accent text-transparent transition-colors duration-300"
+	>
+		<SvelteIcon class="w-5" />
 	</a>
 </footer>
 

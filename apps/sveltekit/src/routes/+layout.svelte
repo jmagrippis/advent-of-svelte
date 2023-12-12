@@ -59,7 +59,7 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="SvelteKritic" />
+	<meta property="og:site_name" content="Advent of Svelte... with SvelteKit" />
 	<meta property="og:url" content={$page.url.href} />
 
 	<meta property="og:image" content={ogImageUrl} />

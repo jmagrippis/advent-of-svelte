@@ -21,7 +21,6 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={sansFont.variable}
 			// data-theme will appear on the client
 			suppressHydrationWarning
 		>
@@ -29,7 +28,7 @@ export default function RootLayout({
 				{/* eslint-disable @next/next/no-sync-scripts */}
 				<script src="/theme-toggle.js" />
 			</head>
-			<body>{children}</body>
+			<body className={sansFont.variable}>{children}</body>
 		</html>
 	)
 }

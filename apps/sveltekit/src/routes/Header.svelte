@@ -1,6 +1,6 @@
 <script lang="ts">
 	import {page} from '$app/stores'
-	import kritic from '$lib/images/svelte-kritic.png?enhanced&w=64&img'
+	import elfbot from '$lib/images/elfbot.png?enhanced&w=64&img'
 	import ThemeToggleIcon from './ThemeToggleIcon.svelte'
 
 	const activePageClasses =
@@ -10,17 +10,17 @@
 </script>
 
 <header class="bg-surface-brand-1/80 sticky top-0 z-50 mb-[5vh] backdrop-blur">
-	<nav class="flex items-center justify-between px-2 py-4">
+	<nav class="flex items-center justify-between px-2 py-4 sm:px-4">
 		<a
 			href="/"
-			class={`flex items-center gap-4 font-bold ${
+			class={`hover:text-foreground-accent flex items-center gap-4 font-bold transition-colors duration-300 ${
 				$page.url.pathname === '/' ? activePageClasses : ''
 			}`}
 		>
 			<enhanced:img
 				class={`w-6 ${$page.url.pathname !== '/' ? 'saturate-50' : ''}`}
-				src={kritic}
-				alt="The Kritic, SvelteKritic’s mascot"
+				src={elfbot}
+				alt="Elfbot, Santa’s robotic elf helper!"
 			/>
 			<svelte:element this={pageTitleElement} class="inline-block"
 				>Advent of Svelte</svelte:element
@@ -31,14 +31,14 @@
 				<li>
 					<a
 						href="/about"
-						class={$page.url.pathname.startsWith('/about')
-							? activePageClasses
-							: undefined}>about</a
+						class={`hover:text-foreground-accent transition-colors duration-300 ${
+							$page.url.pathname.startsWith('/about') ? activePageClasses : ''
+						}`}>about</a
 					>
 				</li>
 			</ul>
 			<button
-				class="hover:text-primary-400"
+				class="hover:text-foreground-accent transition-colors duration-300"
 				aria-label="toggle theme"
 				aria-live="polite"
 				on:click|preventDefault={() => {

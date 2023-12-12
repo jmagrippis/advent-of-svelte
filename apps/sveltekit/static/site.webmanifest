@@ -1,6 +1,6 @@
 {
-	"name": "SvelteKritic",
-	"short_name": "SvelteKritic",
+	"name": "Advent of Svelte... with SvelteKit!",
+	"short_name": "Advent of Svelte",
 	"icons": [
 		{
 			"src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
 			"type": "image/png"
 		}
 	],
-	"theme_color": "#9333ea",
-	"background_color": "#10021d",
+	"theme_color": "#ea5878",
+	"background_color": "#02131d",
 	"display": "standalone"
 }

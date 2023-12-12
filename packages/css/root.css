@@ -18,6 +18,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		min-height: 100vh;
+		font-family: var(--font-sans);
 	}
 
 	input,
@@ -39,6 +40,8 @@
 	:root {
 		--padding-inline: clamp(1rem, 5vw, 3rem);
 		--short-animation-duration: 300ms;
+
+		--font-sans: 'Raleway Variable', system-ui, sans-serif;
 
 		--brand-hue: 158deg;
 		--accent-hue: 347deg;
