@@ -30,7 +30,11 @@ const config = {
 					accent: {
 						1: withAlphaValue('surface-accent-1-color'),
 					},
+					gray: {
+						1: withAlphaValue('surface-gray-1-color'),
+					},
 				},
+				gray: colors.stone,
 			},
 			aspectRatio: {
 				'game-box': '2 / 3',
