@@ -23,7 +23,10 @@
 		"moduleResolution": "Bundler",
 		"allowJs": true,
 		"jsx": "preserve",
-		"noEmit": true
+		"noEmit": true,
+		"paths": {
+			"@/*": ["./src/*"]
+		}
 	},
 	"include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules"]

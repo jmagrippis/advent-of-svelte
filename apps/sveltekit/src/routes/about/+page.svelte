@@ -13,4 +13,5 @@
 			>Advent of Svelte 2023</OutboundLink
 		> coding challenges!
 	</p>
+	<p>This is the SvelteKit implementation!</p>
 </main>

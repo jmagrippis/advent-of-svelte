@@ -1,6 +1,7 @@
 import './globals.css'
 import type {Metadata} from 'next'
 import {Raleway} from 'next/font/google'
+import {Header} from './Header'
 
 const sansFont = Raleway({
 	subsets: ['latin'],
@@ -43,7 +44,11 @@ export default function RootLayout({
 				{/* eslint-disable @next/next/no-sync-scripts */}
 				<script src="/theme-toggle.js" />
 			</head>
-			<body className={sansFont.variable}>{children}</body>
+			<body className={sansFont.variable}>
+				<Header />
+				{children}
+				<footer>have fun</footer>
+			</body>
 		</html>
 	)
 }
