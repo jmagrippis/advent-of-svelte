@@ -6,4 +6,10 @@
 	>
 		Naughty or Nice Tracker
 	</a>
+	<a
+		class="decoration-foreground-accent underline transition duration-300 hover:brightness-125"
+		href="/munch-o-meter"
+	>
+		Merry Munch-o-Meter
+	</a>
 </main>

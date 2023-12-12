@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import OutboundLink from '$lib/components/OutboundLink.svelte'
 	import YouTubeLink from '$lib/components/YouTubeLink.svelte'
 </script>
