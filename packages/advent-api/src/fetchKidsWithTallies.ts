@@ -3,7 +3,7 @@ export type FetchKidsWithTalliesOptions = {
 	status?: string | null
 }
 
-type Kid = {
+export type Kid = {
 	name: string
 	tally: number
 }

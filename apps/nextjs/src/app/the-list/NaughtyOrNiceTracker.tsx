@@ -5,7 +5,7 @@
  */
 import {Input} from '@/components/ui/input'
 import {Pill} from '../../components/ui/Pill'
-import {fetchKidsWithTallies} from './fetchKidsWithTallies'
+import {fetchKidsWithTallies} from '@repo/advent-api'
 import {MagnifyingGlassIcon} from '@heroicons/react/24/outline'
 
 type Props = {query?: string; status?: string}
@@ -19,13 +19,8 @@ export const NaughtyOrNiceTracker = async ({query, status}: Props) => {
 					<form>
 						<label className="grid grow items-center gap-2 md:grid-cols-3">
 							<span>Search by name:</span>
-							<span className="flex items-center gap-4">
-								<Input
-									name="query"
-									defaultValue={query}
-									className="md:col-span-2"
-									placeholder="Search Child's Name"
-								/>
+							<span className="flex items-center gap-4 md:col-span-2">
+								<Input name="query" defaultValue={query} placeholder="timmy" />
 								<button>
 									<span className="sr-only">execute search</span>{' '}
 									<MagnifyingGlassIcon className="h-7 w-7" />
