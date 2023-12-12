@@ -10,7 +10,7 @@
 
 <section class="flex flex-col gap-4">
 	<search>
-		<form>
+		<form data-sveltekit-keepfocus>
 			<label class="grid grow items-center gap-2 md:grid-cols-3">
 				<span>Search by name:</span>
 				<span class="flex items-center gap-4 md:col-span-2">
