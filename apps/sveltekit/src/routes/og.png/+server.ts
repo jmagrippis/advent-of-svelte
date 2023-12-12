@@ -7,7 +7,7 @@ import type {RequestHandler} from '@sveltejs/kit'
 import {ImageResponse} from '@vercel/og'
 
 export const GET: RequestHandler = async ({url, fetch}) => {
-	const sansFont = await fetch('/fonts/Inconsolata-Medium.ttf').then((res) =>
+	const sansFont = await fetch('/fonts/Raleway-Medium.ttf').then((res) =>
 		res.arrayBuffer(),
 	)
 
@@ -15,6 +15,7 @@ export const GET: RequestHandler = async ({url, fetch}) => {
 
 	const html = {
 		type: 'div',
+		key: null,
 		props: {
 			children: {
 				type: 'div',
@@ -23,19 +24,36 @@ export const GET: RequestHandler = async ({url, fetch}) => {
 						{
 							type: 'img',
 							props: {
-								width: 320,
-								height: 320,
+								width: 256,
+								height: 256,
 								src: mascotUrl.toString(),
 							},
 						},
 						{
 							type: 'div',
 							props: {
-								children: 'SvelteKritic',
+								children: 'Advent of Svelte',
 								style: {
-									fontSize: 96,
+									fontSize: 78,
 									backgroundImage:
 										'linear-gradient(to bottom, #059669, #a7f3d0)',
+									backgroundClip: 'text',
+									color: 'transparent',
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+									flexDirection: 'column',
+								},
+							},
+						},
+						{
+							type: 'div',
+							props: {
+								children: 'with SvelteKit!',
+								style: {
+									fontSize: 56,
+									backgroundImage:
+										'linear-gradient(to bottom, #be123c, #fecdd3)',
 									backgroundClip: 'text',
 									color: 'transparent',
 									display: 'flex',
@@ -78,7 +96,7 @@ export const GET: RequestHandler = async ({url, fetch}) => {
 		height: 630,
 		fonts: [
 			{
-				name: 'Inconsolata',
+				name: 'Raleway',
 				data: sansFont,
 				style: 'normal',
 				weight: 500,
