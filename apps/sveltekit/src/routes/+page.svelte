@@ -12,4 +12,10 @@
 	>
 		Merry Munch-o-Meter
 	</a>
+	<a
+		class="decoration-foreground-accent underline transition duration-300 hover:brightness-125"
+		href="/balancer"
+	>
+		Sleigh Load Balancer
+	</a>
 </main>

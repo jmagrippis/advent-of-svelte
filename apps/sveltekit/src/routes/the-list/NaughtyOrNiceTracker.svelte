@@ -55,13 +55,22 @@
 		view-transition-name: tracker-search;
 	}
 
-	/* Exit transition */
 	:global(::view-transition-old(tracker-search)):only-child {
 		animation: 300ms ease-out both fade-out-to-left;
 	}
 
-	/* Entry transition */
 	:global(::view-transition-new(tracker-search)):only-child {
 		animation: 300ms ease-out both slide-from-right;
+	}
+
+	/* "back" navigation */
+	:global(:root[data-back]::view-transition-old(tracker-search)):only-child {
+		pointer-events: none;
+		animation: 300ms ease-out both fade-out-to-right;
+	}
+
+	:global(:root[data-back]::view-transition-new(tracker-search)):only-child {
+		pointer-events: none;
+		animation: 300ms ease-out both slide-from-left;
 	}
 </style>
