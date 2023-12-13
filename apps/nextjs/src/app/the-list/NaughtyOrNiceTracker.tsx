@@ -31,24 +31,28 @@ export const NaughtyOrNiceTracker = async ({query, status}: Props) => {
 				</form>
 			</search>
 
-			<ul className="flex flex-col gap-1">
-				{kids.map(({name, tally}) => (
-					<li
-						key={`${name}-${tally}`}
-						className="flex items-center justify-between"
-					>
-						<div>
-							<strong>{name}</strong>: <span>{tally} good deeds</span>
-						</div>
-						<span></span>
-						{tally >= 0 ? (
-							<Pill className="bg-primary-600">Nice 👼</Pill>
-						) : (
-							<Pill className="bg-secondary-600">Naughty 😈</Pill>
-						)}
-					</li>
-				))}
-			</ul>
+			{kids && kids.length ? (
+				<ul className="flex flex-col gap-1">
+					{kids.map(({name, tally}) => (
+						<li
+							key={`${name}-${tally}`}
+							className="flex items-center justify-between"
+						>
+							<div>
+								<strong>{name}</strong>: <span>{tally} good deeds</span>
+							</div>
+							<span></span>
+							{tally >= 0 ? (
+								<Pill className="bg-primary-600">Nice 👼</Pill>
+							) : (
+								<Pill className="bg-secondary-600">Naughty 😈</Pill>
+							)}
+						</li>
+					))}
+				</ul>
+			) : (
+				<div>🫥 No matching kids!</div>
+			)}
 		</section>
 	)
 }

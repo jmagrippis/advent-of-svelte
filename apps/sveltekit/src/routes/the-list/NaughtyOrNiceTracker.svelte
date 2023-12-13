@@ -29,21 +29,25 @@
 		</form>
 	</search>
 
-	<ul class="flex flex-col gap-1">
-		{#each kids as { name, tally }}
-			<li class="flex items-center justify-between">
-				<div>
-					<strong>{name}</strong>: <span>{tally} good deeds</span>
-				</div>
-				<span></span>
-				{#if tally >= 0}
-					<Pill class="bg-primary-600">Nice 👼</Pill>
-				{:else}
-					<Pill class="bg-secondary-600">Naughty 😈</Pill>
-				{/if}
-			</li>
-		{/each}
-	</ul>
+	{#if kids && kids.length}
+		<ul class="flex flex-col gap-1">
+			{#each kids as { name, tally }}
+				<li class="flex items-center justify-between">
+					<div>
+						<strong>{name}</strong>: <span>{tally} good deeds</span>
+					</div>
+					<span></span>
+					{#if tally >= 0}
+						<Pill class="bg-primary-600">Nice 👼</Pill>
+					{:else}
+						<Pill class="bg-secondary-600">Naughty 😈</Pill>
+					{/if}
+				</li>
+			{/each}
+		</ul>
+	{:else}
+		<div>🫥 No matching kids!</div>
+	{/if}
 </section>
 
 <style>
