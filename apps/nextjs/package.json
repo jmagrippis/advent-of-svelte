@@ -19,16 +19,13 @@
 		"next": "^14.0.4",
 		"open-props": "^1.6.16",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"tailwind-merge": "^2.1.0",
-		"tailwindcss-animate": "^1.0.7"
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@next/eslint-plugin-next": "^14.0.4",
 		"@tailwindcss/forms": "^0.5.7",
-		"@types/eslint": "^8.44.8",
 		"@types/node": "^18.19.3",
-		"@types/react": "^18.2.43",
+		"@types/react": "^18.2.45",
 		"@types/react-dom": "^18.2.17",
 		"autoprefixer": "^10.4.16",
 		"eslint": "^8.55.0",
