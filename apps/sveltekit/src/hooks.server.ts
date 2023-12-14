@@ -1,9 +1,10 @@
+import {building} from '$app/environment'
 import {PUBLIC_API_MOCKING_ENABLED} from '$env/static/public'
 import type {Handle} from '@sveltejs/kit'
 
-if (PUBLIC_API_MOCKING_ENABLED === 'true') {
-	await import('@repo/msw').then(async ({setupMocks}) => {
-		await setupMocks()
+if (!building && PUBLIC_API_MOCKING_ENABLED === 'true') {
+	import('./mocks/mswNode').then(async ({mswNode}) => {
+		mswNode.listen()
 	})
 }
 
