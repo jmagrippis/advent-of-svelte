@@ -3,6 +3,7 @@
 
 	import PageTitle from '$lib/components/PageTitle.svelte'
 	import PulsingHeart from '../PulsingHeart.svelte'
+	import {fetchHeartRate} from '@repo/advent-api'
 
 	export let data
 
@@ -10,29 +11,24 @@
 	$: currentHeartRate = historicalHeartRates[historicalHeartRates.length - 1]
 
 	onMount(() => {
-		const ac = new AbortController()
-		const signal = ac.signal
-		fetch('/api/heart-rate', {signal})
-			.then(async (response) => {
-				if (!response.ok || !response.body) return
-
-				const reader = response.body
-					.pipeThrough(new TextDecoderStream())
-					.getReader()
-
-				while (true) {
-					const {value, done} = await reader.read()
-					if (done) break
-					historicalHeartRates = [...historicalHeartRates, Number(value)]
-				}
-			})
-			.catch((error) => {
+		let ac: AbortController
+		const interval = setInterval(async () => {
+			ac = new AbortController()
+			const signal = ac.signal
+			const heartRate = await fetchHeartRate(signal).catch((error) => {
 				if (error.message.includes('aborted')) return
 				console.error(error)
 			})
+			if (heartRate) {
+				historicalHeartRates = [...historicalHeartRates, heartRate]
+			}
+		}, 1_000)
 
 		return () => {
-			ac.abort()
+			clearInterval(interval)
+			if (ac) {
+				ac.abort()
+			}
 		}
 	})
 </script>
