@@ -1,14 +1,7 @@
 import {PUBLIC_API_MOCKING_ENABLED} from '$env/static/public'
-import type {Handle} from '@sveltejs/kit'
 
 if (PUBLIC_API_MOCKING_ENABLED === 'true') {
 	await import('@repo/msw').then(async ({setupMocks}) => {
 		await setupMocks()
 	})
-}
-
-export const handle: Handle = async ({event, resolve}) => {
-	const response = await resolve(event)
-
-	return response
 }
