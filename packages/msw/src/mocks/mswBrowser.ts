@@ -1,5 +1,5 @@
 import {setupWorker} from 'msw/browser'
 
-import {handlers} from '@repo/msw'
+import {handlers} from './handlers'
 
 export const mswBrowser = setupWorker(...handlers)
