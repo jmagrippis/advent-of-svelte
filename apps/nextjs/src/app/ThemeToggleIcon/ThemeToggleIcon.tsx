@@ -1,4 +1,3 @@
-import 'open-props/easings.min.css'
 import styles from './ThemeToggleIcon.module.css'
 
 type Props = {
