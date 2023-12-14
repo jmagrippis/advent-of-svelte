@@ -18,4 +18,10 @@
 	>
 		Sleigh Load Balancer
 	</a>
+	<a
+		class="decoration-foreground-accent underline transition duration-300 hover:brightness-125"
+		href="/heart-rate-monitor"
+	>
+		Santa’s Heart Rate Monitor
+	</a>
 </main>
