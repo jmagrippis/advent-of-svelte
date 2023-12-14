@@ -1,0 +1,1 @@
+export {setupMocks} from './mocks'
