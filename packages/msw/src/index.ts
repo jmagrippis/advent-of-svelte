@@ -1,1 +1,1 @@
-export {setupMocks} from './mocks'
+export {handlers} from './mocks/handlers'
