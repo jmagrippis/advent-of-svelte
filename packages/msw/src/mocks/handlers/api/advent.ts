@@ -8,6 +8,7 @@ const kids = [
 	{name: 'Isabella', tally: -59},
 	{name: 'Noah', tally: 19},
 	{name: 'Mia', tally: -37},
+	{name: 'Jack', tally: -1},
 	{name: 'Will', tally: -20},
 	{name: 'Sam', tally: -91},
 	{name: 'Brittney', tally: -98},
