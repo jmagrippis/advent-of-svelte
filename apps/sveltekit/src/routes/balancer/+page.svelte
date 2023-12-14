@@ -77,7 +77,7 @@
 	}
 
 	.checkboxes {
-		--min: 20ch;
+		--min: 16ch;
 
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 		@apply grid gap-x-2 gap-y-1;
