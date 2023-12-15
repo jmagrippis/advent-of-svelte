@@ -24,6 +24,7 @@
 	div {
 		display: grid;
 		grid-template-areas: 'stack';
+		overflow-y: clip;
 
 		& > :global(*) {
 			grid-area: stack;

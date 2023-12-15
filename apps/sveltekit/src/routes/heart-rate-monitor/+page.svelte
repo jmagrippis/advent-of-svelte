@@ -40,7 +40,7 @@
 
 	<div class="grid items-center md:grid-cols-3">
 		<div class="flex justify-center text-9xl md:justify-start">
-			<strong>{currentHeartRate}</strong><small class="mb-3 self-end text-lg"
+			<strong>{currentHeartRate}</strong><small class="self-end text-lg"
 				>bpm</small
 			>
 		</div>
