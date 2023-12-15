@@ -1,12 +1,23 @@
 <script lang="ts">
 	import PageTitle from '$lib/components/PageTitle.svelte'
+	import {onMount} from 'svelte'
+	import Leaderboards from './Leaderboards.svelte'
 	import Stat from './Stat.svelte'
+	import type {Metrics} from '../api/elf-productivity-metrics/+server'
 
 	export let data
 
-	$: elfNameWithStats = Object.entries(data.elfStats).toSorted(
-		([, a], [, b]) => b.tasksCompleted - a.tasksCompleted,
-	)
+	let latestMetrics = data.metrics
+
+	onMount(() => {
+		const interval = setInterval(async () => {
+			const response = await fetch('/api/elf-productivity-metrics')
+			const metrics: Metrics = await response.json()
+			latestMetrics = metrics
+		}, 10_000)
+
+		return () => clearInterval(interval)
+	})
 </script>
 
 <main class="content-grid grow gap-y-8 lg:gap-y-12">
@@ -14,22 +25,14 @@
 		>Elf Productivity Dashboard</PageTitle
 	>
 	<section class="grid grid-cols-2 text-7xl lg:text-8xl">
-		<Stat value={data.totalToysCreated} label="toys created" />
-		<Stat value={data.totalPresentsWrapped} label="presents wrapped" />
-		<Stat value={data.averageMinutesPerTask} label="minutes per task" />
-		<Stat value={data.billableHours} label="billable hours" />
+		<Stat value={latestMetrics.totalToysCreated} label="toys created" />
+		<Stat value={latestMetrics.totalPresentsWrapped} label="presents wrapped" />
+		<Stat
+			value={latestMetrics.averageMinutesPerTask}
+			label="minutes per task"
+		/>
+		<Stat value={latestMetrics.billableHours} label="billable hours" />
 	</section>
 
-	<section class="flex flex-col gap-y-4 lg:gap-y-8">
-		<h2 class="text-3xl font-bold lg:text-5xl">🧝🧝‍♀️🧝‍♂️ Elf Leaderboards</h2>
-		<h3 class="text-2xl font-bold lg:text-4xl">✅ Total Tasks Completed</h3>
-		<ol>
-			{#each elfNameWithStats as [name, stats]}
-				<li class="flex justify-between gap-4">
-					<h2 class="text-xl font-medium">{name}</h2>
-					<strong>{stats.tasksCompleted}</strong>
-				</li>
-			{/each}
-		</ol>
-	</section>
+	<Leaderboards elfStats={latestMetrics.elfStats} />
 </main>

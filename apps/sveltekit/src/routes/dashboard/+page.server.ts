@@ -2,22 +2,12 @@ import type {Metrics} from '../api/elf-productivity-metrics/+server'
 import type {PageServerLoad} from './$types'
 
 export const load: PageServerLoad = async ({fetch}) => {
-	const {
-		totalToysCreated,
-		totalPresentsWrapped,
-		averageMinutesPerTask,
-		billableHours,
-		elfStats,
-	} = await fetch('/api/elf-productivity-metrics').then(
+	const metrics = await fetch('/api/elf-productivity-metrics').then(
 		(response) => response.json() as Promise<Metrics>,
 	)
 
 	return {
-		totalToysCreated,
-		totalPresentsWrapped,
-		averageMinutesPerTask,
-		billableHours,
-		elfStats,
+		metrics,
 		meta: {
 			title: 'Elf Productivity Dashboard',
 			description:
