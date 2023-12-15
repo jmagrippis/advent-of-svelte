@@ -2,7 +2,7 @@ import {json} from '@sveltejs/kit'
 import type {RequestHandler} from './$types'
 import {fetchProductivityTasks} from '@repo/advent-api'
 
-type ElfStats = Record<string, {tasksCompleted: number}>
+export type ElfStats = Record<string, {tasksCompleted: number}>
 export type Metrics = {
 	totalToysCreated: number
 	totalPresentsWrapped: number
@@ -10,6 +10,7 @@ export type Metrics = {
 	billableHours: number
 	elfStats: ElfStats
 }
+
 export const GET: RequestHandler = async () => {
 	const tasks = await fetchProductivityTasks()
 
