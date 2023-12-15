@@ -4,7 +4,7 @@
 	import PageTitle from '$lib/components/PageTitle.svelte'
 	import PulsingHeart from '../PulsingHeart.svelte'
 	import {fetchHeartRate} from '@repo/advent-api'
-	import Chart from './Chart.svelte'
+	import LineChart from './LineChart.svelte'
 	import {browser} from '$app/environment'
 
 	export let data
@@ -61,7 +61,11 @@
 			bind:offsetWidth={chartWidth}
 			bind:offsetHeight={chartHeight}
 		>
-			<Chart data={latestHeartRates} width={chartWidth} height={chartHeight} />
+			<LineChart
+				data={latestHeartRates}
+				width={chartWidth}
+				height={chartHeight}
+			/>
 		</div>
 	{/if}
 </main>

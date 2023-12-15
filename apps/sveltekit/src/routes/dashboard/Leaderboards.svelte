@@ -1,8 +1,13 @@
 <script lang="ts">
 	import {flip} from 'svelte/animate'
 	import type {ElfStats} from '../api/elf-productivity-metrics/+server'
+	import BarChart from './BarChart.svelte'
+	import {browser} from '$app/environment'
 
 	export let elfStats: ElfStats
+
+	let chartWidth: number
+	let chartHeight: number
 
 	$: elfNameWithStats = Object.entries(elfStats).sort(
 		([, a], [, b]) => b.tasksCompleted - a.tasksCompleted,
@@ -20,4 +25,14 @@
 			</li>
 		{/each}
 	</ol>
+</section>
+
+<section
+	class="breakout min-h-[33svh]"
+	bind:offsetWidth={chartWidth}
+	bind:offsetHeight={chartHeight}
+>
+	{#if browser}
+		<BarChart data={elfNameWithStats} width={chartWidth} height={chartHeight} />
+	{/if}
 </section>

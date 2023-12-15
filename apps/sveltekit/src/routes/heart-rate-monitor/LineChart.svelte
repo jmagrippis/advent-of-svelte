@@ -12,7 +12,7 @@
 	let gx: SVGElement
 	let gy: SVGElement
 
-	$: minMaxedData = [65, 100, ...data]
+	$: minMaxedData = [65, 80, ...data]
 
 	$: x = d3.scaleLinear([0, data.length - 1], [marginLeft, width - marginRight])
 	// @ts-ignore minMaxedData IS at least two numbers
