@@ -4,12 +4,20 @@
 	import PageTitle from '$lib/components/PageTitle.svelte'
 	import PulsingHeart from '../PulsingHeart.svelte'
 	import {fetchHeartRate} from '@repo/advent-api'
+	import Chart from './Chart.svelte'
+	import {browser} from '$app/environment'
 
 	export let data
 
 	let historicalHeartRates: number[] = [data.serverHeartRate]
 	$: currentHeartRate = historicalHeartRates[historicalHeartRates.length - 1]
+	$: latestHeartRates =
+		historicalHeartRates.length >= 60
+			? historicalHeartRates.slice(historicalHeartRates.length - 60)
+			: historicalHeartRates
 
+	let chartWidth: number
+	let chartHeight: number
 	onMount(() => {
 		let ac: AbortController
 		const interval = setInterval(async () => {
@@ -46,4 +54,14 @@
 		</div>
 		<PulsingHeart class="w-full md:col-span-2" animationMode="always" />
 	</div>
+
+	{#if browser}
+		<div
+			class="breakout"
+			bind:offsetWidth={chartWidth}
+			bind:offsetHeight={chartHeight}
+		>
+			<Chart data={latestHeartRates} width={chartWidth} height={chartHeight} />
+		</div>
+	{/if}
 </main>
