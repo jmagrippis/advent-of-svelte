@@ -14,7 +14,7 @@
 			const response = await fetch('/api/elf-productivity-metrics')
 			const metrics: Metrics = await response.json()
 			latestMetrics = metrics
-		}, 10_000)
+		}, 60_000)
 
 		return () => clearInterval(interval)
 	})
