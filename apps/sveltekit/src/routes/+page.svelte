@@ -1,33 +1,22 @@
+<script lang="ts">
+	const links = [
+		{name: '👼 Naughty or Nice Tracker 😈', href: '/the-list'},
+		{name: '🍪 Merry Munch-o-Meter 🥛', href: '/munch-o-meter'},
+		{name: '🛷 Sleigh Load Balancer 🎁', href: '/balancer'},
+		{name: '💓 Santa’s Heart Rate Monitor 🎅', href: '/heart-rate-monitor'},
+		{name: '🧝 Elf Productivity Dashboard 📈', href: '/dashboard'},
+		{name: '⏲️ Mistletoe Metronome 🎊', href: '/metronome'},
+	]
+</script>
+
 <main class="content-grid gap-y-4 text-xl lg:gap-y-8 lg:text-2xl">
-	<h1 class="text-5xl font-bold">Happy holidays!</h1>
-	<a
-		class="decoration-foreground-accent underline transition duration-300 hover:brightness-125"
-		href="/the-list"
-	>
-		Naughty or Nice Tracker
-	</a>
-	<a
-		class="decoration-foreground-accent underline transition duration-300 hover:brightness-125"
-		href="/munch-o-meter"
-	>
-		Merry Munch-o-Meter
-	</a>
-	<a
-		class="decoration-foreground-accent underline transition duration-300 hover:brightness-125"
-		href="/balancer"
-	>
-		Sleigh Load Balancer
-	</a>
-	<a
-		class="decoration-foreground-accent underline transition duration-300 hover:brightness-125"
-		href="/heart-rate-monitor"
-	>
-		Santa’s Heart Rate Monitor
-	</a>
-	<a
-		class="decoration-foreground-accent underline transition duration-300 hover:brightness-125"
-		href="/dashboard"
-	>
-		Elf Productivity Dashboard
-	</a>
+	<h1 class="mb-4 text-5xl font-bold">Happy holidays!</h1>
+	{#each links as { name, href }}
+		<a
+			class="decoration-foreground-accent underline transition duration-300 hover:brightness-125"
+			{href}
+		>
+			{name}
+		</a>
+	{/each}
 </main>
