@@ -6,6 +6,7 @@
 		{name: '💓 Santa’s Heart Rate Monitor 🎅', href: '/heart-rate-monitor'},
 		{name: '🧝 Elf Productivity Dashboard 📈', href: '/dashboard'},
 		{name: '⏲️ Mistletoe Metronome 🎊', href: '/metronome'},
+		{name: '✉️ Morse Code Translator 📡', href: '/morse'},
 	]
 </script>
 

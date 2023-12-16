@@ -27,8 +27,6 @@
 
 	<button
 		on:click={() => {
-			console.log($beats)
-
 			const timestamp = new Date().toISOString()
 
 			beats.update(($beats) => $beats.add(timestamp))
