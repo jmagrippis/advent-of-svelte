@@ -38,7 +38,6 @@
 			<span
 				class="pb-2"
 				transition:fly={{
-					delay: 250,
 					duration: 300,
 					y: 120,
 					easing: quintOut,
