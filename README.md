@@ -6,7 +6,8 @@ Solutions to the [Advent of Svelte 2023 daily challenges](https://advent.sveltes
 
 Johnny livestreams [the development of this project](https://www.youtube.com/@johnnifytech)!
 
-- [Days 1 & 2](https://www.youtube.com/watch?v=Wif6KWpFFM8)
+- [Naughty or Nice Tracker & Merry Munch-o-Meter](https://www.youtube.com/watch?v=Wif6KWpFFM8)
+- [Reactive Charts with D3 & Svelte](https://www.youtube.com/watch?v=7YPidUz2fjc), for Santa's Heart Rate Monitor and the Elf Productivity Dashboard
 
 ## What's inside?
 
