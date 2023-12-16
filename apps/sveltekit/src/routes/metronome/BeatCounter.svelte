@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Button from '$lib/components/Button.svelte'
 	import {quintOut} from 'svelte/easing'
 	import {derived, writable} from 'svelte/store'
 	import {fly} from 'svelte/transition'
@@ -25,7 +26,7 @@
 		</strong><small class="self-end text-lg">bpm</small>
 	</div>
 
-	<button
+	<Button
 		on:click={() => {
 			const timestamp = new Date().toISOString()
 
@@ -37,9 +38,7 @@
 					return $beats
 				})
 			}, 60_000)
-		}}
-		class="bg-surface-brand-2 focus:ring-foreground-accent active:duration-50 active:bg-surface-accent-1 relative rounded-lg px-4 py-8 text-5xl shadow transition duration-300 hover:brightness-125 focus:outline-none focus:ring-4 active:-translate-y-1 disabled:opacity-50"
-		>BEAT!</button
+		}}>BEAT!</Button
 	>
 </section>
 
