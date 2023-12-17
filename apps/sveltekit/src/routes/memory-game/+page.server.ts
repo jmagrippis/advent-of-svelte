@@ -56,20 +56,26 @@ export const actions = {
 			({status}) => status === 'picked',
 		)
 
+		let outcome: 'miss' | 'match' | null = null
+
 		if (alreadyPickedCardIndex >= 0) {
 			const alreadyPickedCard = gameBoard[alreadyPickedCardIndex]
 			if (alreadyPickedCard.face === pickedCard.face) {
 				gameBoard[cardIndex].status = 'matched'
 				alreadyPickedCard.status = 'matched'
+				outcome = 'match'
 			} else {
 				gameBoard[cardIndex].status = 'hidden'
 				alreadyPickedCard.status = 'hidden'
+				outcome = 'miss'
 			}
 		} else {
 			gameBoard[cardIndex].status = 'picked'
 		}
 
 		cookies.set('memory-game-board', JSON.stringify(gameBoard), {path: ''})
+
+		return {outcome}
 	},
 	new: async ({cookies}) => {
 		cookies.delete('memory-game-board', {path: ''})
