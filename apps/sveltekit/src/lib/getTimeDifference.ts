@@ -31,7 +31,7 @@ export const getTimeDifference = (
 		seconds: 0,
 	}
 	for (const {unit, ms, modulo} of units) {
-		difference[unit as keyof TimeDifference] = Math.round(msDifference / ms)
+		difference[unit as keyof TimeDifference] = Math.floor(msDifference / ms)
 		if (modulo) {
 			difference[unit as keyof TimeDifference] %= modulo
 		}
