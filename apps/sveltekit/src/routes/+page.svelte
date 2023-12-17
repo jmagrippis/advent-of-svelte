@@ -7,6 +7,7 @@
 		{name: '🧝 Elf Productivity Dashboard 📈', href: '/dashboard'},
 		{name: '⏲️ Mistletoe Metronome 🎊', href: '/metronome'},
 		{name: '✉️ Morse Code Translator 📡', href: '/morse'},
+		{name: '🃏 Deck of Doubles Memory Game 🂡', href: '/memory-game'},
 	]
 </script>
 
