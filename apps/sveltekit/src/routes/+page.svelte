@@ -8,6 +8,7 @@
 		{name: '⏲️ Mistletoe Metronome 🎊', href: '/metronome'},
 		{name: '✉️ Morse Code Translator 📡', href: '/morse'},
 		{name: '🃏 Deck of Doubles Memory Game 🂡', href: '/memory-game'},
+		{name: '🎄 Countdown 🎊', href: '/countdown'},
 	]
 </script>
 
