@@ -1,6 +1,4 @@
 <script lang="ts">
-	import {enhance} from '$app/forms'
-	import Button from '$lib/components/Button.svelte'
 	import PageTitle from '$lib/components/PageTitle.svelte'
 	import Board from './Board/Board.svelte'
 
@@ -21,13 +19,4 @@
 	</section>
 
 	<Board board={data.board} />
-
-	<form
-		use:enhance
-		method="POST"
-		action="?/new"
-		class="flex flex-col items-center"
-	>
-		<Button>new deal</Button>
-	</form>
 </main>
