@@ -8,11 +8,17 @@
 	export let board: GameCard[]
 
 	let selectedIndices = new Set()
-	let justMissed = false
+	let formStatus: 'idle' | 'submitting' | 'just-missed' = 'idle'
 </script>
 
 <form
-	use:enhance={({formData}) => {
+	use:enhance={({formData, cancel}) => {
+		if (formStatus !== 'idle') {
+			cancel()
+			return
+		}
+
+		formStatus = 'submitting'
 		// @ts-ignore TODO: we can typescript type this with Svelte 5
 		const selectedCardIndex = parseInt(formData.get('index'))
 
@@ -24,9 +30,8 @@
 				if (result.data?.outcome) {
 					if (result.data?.outcome === 'miss') {
 						await delay(100)
-						justMissed = true
+						formStatus = 'just-missed'
 						await delay(500)
-						justMissed = false
 						selectedIndices = new Set()
 					} else if (result.data?.outcome === 'match') {
 						selectedIndices = new Set()
@@ -35,6 +40,7 @@
 			}
 
 			await update()
+			formStatus = 'idle'
 		}
 	}}
 	method="POST"
@@ -46,7 +52,7 @@
 			{face}
 			revealed={selectedIndices.has(index) || status !== 'hidden'}
 			value={`${index}`}
-			shaking={justMissed && selectedIndices.has(index)}
+			shaking={formStatus === 'just-missed' && selectedIndices.has(index)}
 		/>
 	{/each}
 </form>
