@@ -10,6 +10,7 @@
 		{name: '🃏 Deck of Doubles Memory Game 🂡', href: '/memory-game'},
 		{name: '🎄 Countdown 🎊', href: '/countdown'},
 		{name: '🎅 Pop-up! 🚀', href: '/popup'},
+		{name: '🧝‍♂️ Elf Name Generator 🧝‍♀️', href: '/name-generator'},
 	]
 </script>
 
