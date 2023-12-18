@@ -7,7 +7,7 @@
 </script>
 
 <footer
-	class="bg-surface-1 mt-[5vh] flex items-center justify-center gap-2 py-2"
+	class="bg-surface-1 flex shrink-0 items-center justify-center gap-2 py-2 pt-[5svh]"
 >
 	<div class="flex shrink-0 items-center justify-center gap-2">
 		Made with
