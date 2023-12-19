@@ -12,6 +12,7 @@
 		{name: '🎅 Pop-up! 🚀', href: '/popup'},
 		{name: '🧝‍♂️ Elf Name Generator 🧝‍♀️', href: '/name-generator'},
 		{name: '🌠 Christmas Card 🎑', href: '/christmas-card'},
+		{name: '⚖️ Auto Sleigh Balancer 🛷', href: '/auto-balancer'},
 	]
 </script>
 
