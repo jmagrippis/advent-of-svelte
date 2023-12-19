@@ -1,8 +1,8 @@
 <script lang="ts">
-	import PageTitle from '$lib/components/PageTitle.svelte'
 	import {onMount} from 'svelte'
+	import PageTitle from '$lib/components/PageTitle.svelte'
+	import Stat from '$lib/components/Stat.svelte'
 	import Leaderboards from './Leaderboards.svelte'
-	import Stat from './Stat.svelte'
 	import type {Metrics} from '../api/elf-productivity-metrics/+server'
 
 	export let data
