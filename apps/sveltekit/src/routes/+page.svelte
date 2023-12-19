@@ -11,6 +11,7 @@
 		{name: '🎄 Countdown 🎊', href: '/countdown'},
 		{name: '🎅 Pop-up! 🚀', href: '/popup'},
 		{name: '🧝‍♂️ Elf Name Generator 🧝‍♀️', href: '/name-generator'},
+		{name: '🌠 Christmas Card 🎑', href: '/christmas-card'},
 	]
 </script>
 
