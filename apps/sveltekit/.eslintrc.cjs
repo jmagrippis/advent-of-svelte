@@ -31,6 +31,7 @@ module.exports = {
 		'@typescript-eslint/ban-ts-comment': ['warn'],
 		'@typescript-eslint/no-var-requires': ['off'],
 		'@typescript-eslint/no-unused-vars': ['warn'],
+		'prefer-const': ['warn'],
 		'no-constant-condition': ['off'],
 		'svelte/no-at-html-tags': ['off'],
 		'svelte/invalid-css-identifier': ['off'],

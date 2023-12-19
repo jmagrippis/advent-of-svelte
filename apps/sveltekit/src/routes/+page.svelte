@@ -13,6 +13,7 @@
 		{name: '🧝‍♂️ Elf Name Generator 🧝‍♀️', href: '/name-generator'},
 		{name: '🌠 Christmas Card 🎑', href: '/christmas-card'},
 		{name: '⚖️ Auto Sleigh Balancer 🛷', href: '/auto-balancer'},
+		{name: '❄️ Snowfall Symphony ❆', href: '/snowfall'},
 	]
 </script>
 

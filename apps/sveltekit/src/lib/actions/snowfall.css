@@ -1,0 +1,19 @@
+.snowfall-flake {
+	width: var(--flake-size);
+	height: var(--flake-size);
+	position: absolute;
+	z-index: 0;
+	color: var(--flake-color);
+	animation: var(--duration) ease-out forwards snowfall;
+}
+
+@keyframes snowfall {
+	0% {
+		transform: translateY(0);
+		opacity: 0.95;
+	}
+	100% {
+		transform: translateY(200px);
+		opacity: 0;
+	}
+}
